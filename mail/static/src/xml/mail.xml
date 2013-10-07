@@ -53,6 +53,8 @@
                     <a class="oe_compose_post" t-if="!widget.options.compose_placeholder and !widget.options.view_mailbox">Send a messege</a>
                     <span class="oe_grey oe_sep_word">or</span>
                     <a class="oe_compose_log">Log a note</a>
+                    <span class="oe_grey oe_sep_word">or</span>
+                    <a class="oe_compose_sms">Send a sms</a>
                 </div>
             </t>
         </div>

@@ -67,6 +67,17 @@ class res_partner_mail(osv.Model):
                 partner_ids.append((4, thread_id))
             kwargs['partner_ids'] = partner_ids
             thread_id = False
+        # handle sms sending
+        if kwargs.get('type') == 'sms':
+            # TODO: display send sms rather than logged a note
+            kwargs['type'] = 'comment'
+            id = kwargs['context']['default_res_id']
+            read = self.read(cr, uid, id, ['mobile'], kwargs.get('context', None))
+            if read['mobile']:
+                ctx = {'sms_no': read['mobile'], 'sms_msg':kwargs['body']}
+                res = self.pool.get('sim.card').send_sms(cr, uid, [], ctx)
+                if not res: raise osv.except_osv('Error:', 'Error.')
+
         return super(res_partner_mail, self).message_post(cr, uid, thread_id, **kwargs)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

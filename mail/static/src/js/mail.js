@@ -510,6 +510,7 @@ openerp.mail = function (session) {
             this.$('.oe_compact_inbox').on('click', self.on_toggle_quick_composer);
             this.$('.oe_compose_post').on('click', self.on_toggle_quick_composer);
             this.$('.oe_compose_log').on('click', self.on_toggle_quick_composer);
+            this.$('.oe_compose_sms').on('click', self.on_toggle_quick_composer);
             this.$('input.oe_form_binary_file').on('change', _.bind( this.on_attachment_change, this));
             this.$('.oe_cancel').on('click', _.bind( this.on_cancel, this));
             this.$('.oe_post').on('click', self.on_message_post);
@@ -731,6 +732,9 @@ openerp.mail = function (session) {
             if (log) {
                 values['subtype'] = false;
             }
+            if (self.is_sms){
+                values['type'] = 'sms';
+            }
             else {
                 values['subtype'] = 'mail.mt_comment';   
             }
@@ -767,6 +771,7 @@ openerp.mail = function (session) {
             // if clicked: call for suggested recipients
             if (event.type == 'click') {
                 this.is_log = $input.hasClass('oe_compose_log');
+                this.is_sms = $input.hasClass('oe_compose_sms');
                 suggested_partners = this.parent_thread.ds_thread.call('message_get_suggested_recipients', [[this.context.default_res_id]]).done(function (additional_recipients) {
                     var thread_recipients = additional_recipients[self.context.default_res_id];
                     _.each(thread_recipients, function (recipient) {
