@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-extend="mail.compose_message">
+        <t t-jquery=".oe_compose_log" t-operation="after">
+            <span class="oe_grey oe_sep_word">or</span>
+            <a class="oe_compose_sms">Send a Sms</a>
+        </t>
+    </t>
+
+    <t t-extend="mail.thread.message">
+        <!--copy from mail.xml message footer section-->
+        <t t-jquery=".oe_msg_center .oe_msg_footer" t-operation="replace">
+            <t t-if="widget.attachment_ids.length > 0">
+                <div class="oe_msg_attachment_list"></div>
+            </t>
+            <a t-if="widget.author_id and widget.options.show_link and widget.author_id[0]" t-attf-href="#model=res.partner&amp;id=#{widget.author_id[0]}"><t t-raw="widget.author_id[2]"/></a>
+            <span t-if="widget.author_id and (!widget.options.show_link or !widget.author_id[0])"><t t-raw="widget.author_id[2]"/></span>
+            <t t-if="widget.type == 'notification'">
+                updated document
+                <t t-if="widget.partner_ids.length > 0">
+                    <span class='oe_subtle'>•</span>
+                </t>
+            </t>
+            <t t-if="widget.type == 'comment' and ! widget.subtype">
+                logged a note
+            </t>
+            <!--sms type-->
+            <t t-if="widget.type == 'sms' and ! widget.subtype">
+                sended a Sms
+            </t>
+            <t t-if="(widget.type == 'comment' or widget.type == 'email' or widget.type == 'sms') and widget.subtype">
+                to
+                <t t-if="widget.partner_ids.length == 0">
+                    nobody
+                </t>
+            </t>
+            <t t-if="widget.type == 'notification' or ( (widget.type == 'email' or widget.type == 'comment' or widget.type == 'sms') and widget.subtype)"
+               t-foreach="widget.partner_ids.slice(0, 3)" t-as="partner">
+                <span t-attf-class="oe_partner_follower">
+                    <a t-if="widget.options.show_link" t-attf-href="#model=res.partner&amp;id=#{partner[0]}"><t t-raw="partner[1]"/></a>
+                    <t t-if="!widget.options.show_link" t-raw="partner[1]"/>
+                </span>
+                <t t-if="!partner_last">,</t>
+            </t>
+            <t t-if="widget.partner_ids.length > 3">
+                <span t-att-title="widget.extra_partners_str">and <t t-raw="widget.extra_partners_nbr"/> more</span>
+            </t>
+            <t t-if="widget.type == 'notification' and widget.partner_ids.length > 0">
+                notified
+            </t>
+            <span class='oe_subtle'>•</span>
+            <span t-att-title="widget.date"><t t-if="widget.timerelative" t-raw="widget.timerelative"/><t t-if="!widget.timerelative" t-raw="widget.date"/></span>
+            <span t-if="!widget.options.readonly" class='oe_subtle'>•</span>
+            <t t-if="!widget.options.readonly" t-call="mail.thread.message.vote"/>
+        </t>
+    </t>
+
+    <t t-log="render extended mail.xml"></t>
+</templates>

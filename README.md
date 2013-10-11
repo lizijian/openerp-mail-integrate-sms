@@ -3,7 +3,7 @@ openerp-mail-integrate-sms
 
 openerp crm(mail) module integrate android_sms
 
-Base on official mail module(version: openerp-7.0-20130813-231104)
+Now it's totally a individual module to implement this feature.
 
 require:
     oe-android-sms

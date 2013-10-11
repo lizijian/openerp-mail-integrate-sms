@@ -1,0 +1,112 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* crm_mail_sms
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130813-231104\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-10-11 16:59+0000\n"
+"PO-Revision-Date: 2013-10-11 16:59+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:74
+#, python-format
+msgid "and"
+msgstr "和"
+
+#. module: crm_mail_sms
+#: constraint:res.partner:0
+msgid "You cannot create recursive Partner hierarchies."
+msgstr "You cannot create recursive Partner hierarchies."
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:46
+#, python-format
+msgid "updated document"
+msgstr "更新文档"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:56
+#, python-format
+msgid "sended a Sms"
+msgstr "发送了一条短信"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:76
+#, python-format
+msgid "notified"
+msgstr "通知"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:61
+#, python-format
+msgid "nobody"
+msgstr "无"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:29
+#, python-format
+msgid "Send a messege"
+msgstr "发送信息"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:59
+#, python-format
+msgid "to"
+msgstr "到"
+
+#. module: crm_mail_sms
+#: model:ir.model,name:crm_mail_sms.model_res_partner
+msgid "Partner"
+msgstr "业务伙伴"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:74
+#, python-format
+msgid "more"
+msgstr "更多."
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:52
+#, python-format
+msgid "logged a note"
+msgstr "记录一个日志"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:30
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:32
+#, python-format
+msgid "or"
+msgstr "或"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:33
+#, python-format
+msgid "Send a Sms"
+msgstr "发短信"
+
+#. module: crm_mail_sms
+#. openerp-web
+#: code:addons\crm_mail_sms\static\src\xml\mail_sms.xml:31
+#, python-format
+msgid "Log a note"
+msgstr "记录一个笔记"
+
