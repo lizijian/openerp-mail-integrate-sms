@@ -19,9 +19,9 @@ require:
 
 ### Screenshots
 
-<img src="https://github.com/lizijian/openerp-mail-integrate-sms/blob/master/screenshot-cn.jpg" alt="Screenshot 1" title="CN" />
+<img src="https://github.com/lizijian/openerp-mail-integrate-sms/raw/master/screenshot-cn.jpg" alt="Screenshot 1" title="CN" />
 
-<img src="https://github.com/lizijian/openerp-mail-integrate-sms/blob/master/screenshot-cn.jpg" alt="Screenshot 2" title="EN" />
+<img src="https://github.com/lizijian/openerp-mail-integrate-sms/raw/master/screenshot-cn.jpg" alt="Screenshot 2" title="EN" />
 
 ==========================
 
