@@ -38,6 +38,8 @@ class res_partner_mail_sms(osv.Model):
                 res = self.pool.get('sim.card').send_sms(cr, uid, [], ctx)
                 if not res:
                     raise osv.except_osv('Error:', 'Sending Error.')
+            else:
+                    raise osv.except_osv('Error:', 'No mobile No.')
 
         return super(res_partner_mail_sms, self).message_post(cr, uid, thread_id, **kwargs)
 
