@@ -6,6 +6,7 @@ openerp crm(mail) module integrate android_sms
 Now it's totally a individual module to implement this feature.
 
 ==========================
+
 Version: OE7
 
 ==========================
@@ -21,7 +22,7 @@ require:
 
 <img src="https://github.com/lizijian/openerp-mail-integrate-sms/raw/master/screenshot-cn.jpg" alt="Screenshot 1" title="CN" />
 
-<img src="https://github.com/lizijian/openerp-mail-integrate-sms/raw/master/screenshot-cn.jpg" alt="Screenshot 2" title="EN" />
+<img src="https://github.com/lizijian/openerp-mail-integrate-sms/raw/master/screenshot-en.jpg" alt="Screenshot 2" title="EN" />
 
 ==========================
 
