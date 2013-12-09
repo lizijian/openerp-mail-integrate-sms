@@ -12,6 +12,7 @@ Version: OE7
 ==========================
 
 require:
+
     oe-android-sms
     link:
         https://github.com/lizijian/openerp-android-sms
